@@ -36,6 +36,13 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   unicons: ^3.0.0
+  dotenv: ^4.2.0
+  flutter_dotenv: ^5.2.1
+  http: ^1.2.2
+  get_it: ^8.0.2
+  flutter_bloc: ^8.1.6
+  carousel_slider: ^5.0.0
+  timeago: ^3.7.0
 
 dev_dependencies:
   flutter_test:
@@ -61,6 +68,9 @@ flutter:
 
   # assets to your application, add an assets section, like this:
   assets:
+  # env
+    - .env
+  # images
     - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
