@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-import 'features/news_page/presentation/news_page.dart';
+import 'features/news_page/presentation/pages/news_page.dart';
+import 'locator.dart';
 
-void main() {
+Future<void> main() async {
+  await dotenv.load(fileName: ".env");
+  initLocator();
   runApp(const MyApp());
 }
 
