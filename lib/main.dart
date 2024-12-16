@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter News',
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(fontFamily: 'Telegraf'),
       home: Container(
         color: Colors.white,
         child: const Padding(
