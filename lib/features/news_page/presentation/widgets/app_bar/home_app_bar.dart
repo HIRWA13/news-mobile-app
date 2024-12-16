@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/features/news_page/domain/news_use_cases/article_use_cases.dart';
 import 'package:news_app/features/news_page/presentation/widgets/app_bar/logo_text.dart';
+import 'package:news_app/locator.dart';
 import 'package:unicons/unicons.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const HomeAppBar({super.key});
+  HomeAppBar({super.key});
+
+  final ArticleUseCases articleUseCases = locator<ArticleUseCases>();
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +24,11 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
             Icons.sort,
             color: Colors.white,
           ),
-          onPressed: () {},
+          onPressed: () async {},
         ),
       ),
       title: const LogoText(),
+      centerTitle: true,
       actions: [
         Container(
           width: 60,

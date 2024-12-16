@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_app/features/news_page/presentation/state/headlines_cubit.dart';
 import 'package:news_app/features/news_page/presentation/widgets/app_bar/home_app_bar.dart';
 import 'package:news_app/features/news_page/presentation/widgets/headlines/headlines_slider.dart';
+import 'package:news_app/features/news_page/presentation/widgets/latest_news/latest_news.dart';
 
 class NewsPage extends StatelessWidget {
   const NewsPage({super.key});
@@ -21,7 +22,11 @@ class NewsPage extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           color: Colors.white,
           child: Column(
-            children: [HeadlinesSlider()],
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              HeadlinesSlider(),
+              const LatestNews(),
+            ],
           ),
         ),
       ),
