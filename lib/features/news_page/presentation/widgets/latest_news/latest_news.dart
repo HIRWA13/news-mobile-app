@@ -10,50 +10,56 @@ class LatestNews extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.45,
-      child: Column(
-        children: [
-          Row(
-            children: [
-              const Text('Latest News'),
-              const Expanded(
-                child: SizedBox(),
-              ),
-              Container(
-                width: 20,
-                height: 20,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.grey,
-                    width: 1.5,
+    return Container(
+      margin: const EdgeInsets.only(top: 20),
+      child: SizedBox(
+        height: MediaQuery.of(context).size.height * 0.45,
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Container(
+                    margin: const EdgeInsets.only(top: 10, bottom: 20),
+                    child: const Text('Latest News')),
+                const Expanded(
+                  child: SizedBox(),
+                ),
+                Container(
+                  width: 20,
+                  height: 20,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.grey,
+                      width: 1.5,
+                    ),
+                    borderRadius: BorderRadius.circular(50),
                   ),
-                  borderRadius: BorderRadius.circular(50),
+                  child: const Icon(
+                    Icons.arrow_forward_rounded,
+                    size: 15,
+                    color: Colors.grey,
+                  ),
                 ),
-                child: const Icon(
-                  Icons.arrow_forward_rounded,
-                  size: 15,
-                  color: Colors.grey,
+              ],
+            ),
+            BlocBuilder<HeadlinesCubit, List<Headline>>(
+                builder: (context, state) {
+              final headlines = state.reversed.toList();
+              return Expanded(
+                child: ListView.builder(
+                  itemCount: headlines.length,
+                  itemBuilder: (context, index) {
+                    return LatestNewsWidget(
+                      title: headlines[index].title,
+                      sourceName: headlines[index].sourceName,
+                      imageUrl: headlines[index].imageUrl,
+                    );
+                  },
                 ),
-              ),
-            ],
-          ),
-          BlocBuilder<HeadlinesCubit, List<Headline>>(
-              builder: (context, state) {
-            return Expanded(
-              child: ListView.builder(
-                itemCount: state.length,
-                itemBuilder: (context, index) {
-                  return LatestNewsWidget(
-                    title: state[index].title,
-                    sourceName: state[index].sourceName,
-                    imageUrl: state[index].imageUrl,
-                  );
-                },
-              ),
-            );
-          }),
-        ],
+              );
+            }),
+          ],
+        ),
       ),
     );
   }
