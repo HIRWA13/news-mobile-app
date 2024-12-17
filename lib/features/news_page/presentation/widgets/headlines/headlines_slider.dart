@@ -20,17 +20,20 @@ class HeadlinesSlider extends StatelessWidget {
           return const Center(child: CircularProgressIndicator());
         }
         return Expanded(
-          child: CarouselSlider.builder(
-            itemCount: state.length,
-            itemBuilder: (context, index, itemIndex) {
-              return SingleHeadline(headline: state[index]);
-            },
-            options: CarouselOptions(
-              height: 340.0,
-              aspectRatio: 16 / 9,
-              autoPlayCurve: Curves.fastOutSlowIn,
-              enableInfiniteScroll: true,
-              viewportFraction: 0.92,
+          child: Container(
+            margin: const EdgeInsets.only(top: 10),
+            child: CarouselSlider.builder(
+              itemCount: state.length,
+              itemBuilder: (context, index, itemIndex) {
+                return SingleHeadline(headline: state[index]);
+              },
+              options: CarouselOptions(
+                height: 340.0,
+                aspectRatio: 16 / 9,
+                autoPlayCurve: Curves.fastOutSlowIn,
+                enableInfiniteScroll: true,
+                viewportFraction: 0.92,
+              ),
             ),
           ),
         );
