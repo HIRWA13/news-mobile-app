@@ -14,19 +14,53 @@ class LatestNewsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Image.network(imageUrl),
-        Column(
-          children: [
-            Text(
-              sourceName.toUpperCase(),
-              style: const TextStyle(color: Colors.grey),
+    return Container(
+      margin: const EdgeInsets.only(bottom: 20),
+      child: Row(
+        children: [
+          Container(
+            width: 110,
+            height: 110,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              image: DecorationImage(
+                image: NetworkImage(
+                  imageUrl,
+                ),
+                fit: BoxFit.fill,
+              ),
             ),
-            Text(title)
-          ],
-        )
-      ],
+          ),
+          const SizedBox(
+            width: 25,
+          ),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  sourceName.toUpperCase(),
+                  style: const TextStyle(
+                    color: Colors.grey,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(
+                  height: 8,
+                ),
+                Text(
+                  title,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    height: 1.1,
+                    fontSize: 18,
+                  ),
+                )
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }
