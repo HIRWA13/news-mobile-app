@@ -23,7 +23,7 @@ class HeadlinesCubit extends Cubit<List<Headline>> {
         );
         headlines.add(headline);
       }
-      emit(headlines.reversed.toList());
+      emit(headlines);
     } on Exception catch (e) {
       debugPrint('Something went wrong with error  $e');
     }
