@@ -14,18 +14,20 @@ class HeadlinesCubit extends Cubit<List<Headline>> {
     List<Headline> headlines = [];
     try {
       final articles = await articleUseCases.getArticles();
-      for (int i = 0; i < 10; i++) {
+      for (int i = 0; i < articles.length; i++) {
         Headline headline = Headline(
           sourceName: articles[i].sourceName!,
           title: articles[i].title!,
           imageUrl: articles[i].imageUrl!,
           daysAfterPublication: articles[i].publishedDate!,
+          content: articles[i].content,
+          author: articles[i].author,
         );
         headlines.add(headline);
       }
       emit(headlines);
     } on Exception catch (e) {
-      debugPrint('Something went wrong with error  $e');
+      debugPrint('Something went wrong with error $e');
     }
   }
 }
