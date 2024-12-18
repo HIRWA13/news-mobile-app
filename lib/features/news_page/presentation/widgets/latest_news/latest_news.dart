@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:news_app/features/news_page/presentation/pages/article_details_page.dart';
 
 import '../../../domain/news_entities/headline.dart';
 import '../../state/headlines_cubit.dart';
@@ -49,10 +50,22 @@ class LatestNews extends StatelessWidget {
                 child: ListView.builder(
                   itemCount: headlines.length,
                   itemBuilder: (context, index) {
-                    return LatestNewsWidget(
-                      title: headlines[index].title,
-                      sourceName: headlines[index].sourceName,
-                      imageUrl: headlines[index].imageUrl,
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ArticleDetailsPage(
+                              article: headlines[index],
+                            ),
+                          ),
+                        );
+                      },
+                      child: LatestNewsWidget(
+                        title: headlines[index].title,
+                        sourceName: headlines[index].sourceName,
+                        imageUrl: headlines[index].imageUrl,
+                      ),
                     );
                   },
                 ),
