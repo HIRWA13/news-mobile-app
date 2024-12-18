@@ -3,11 +3,15 @@ class Headline {
   final String sourceName;
   final String title;
   final String imageUrl;
+  String? content;
+  String? author;
 
   Headline({
     required this.daysAfterPublication,
     required this.title,
     required this.sourceName,
     required this.imageUrl,
+    this.content,
+    this.author,
   });
 }

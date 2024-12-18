@@ -43,13 +43,15 @@ class SingleHeadline extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Text(
-                      headline.sourceName.toUpperCase(),
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'Telegraf',
-                        fontSize: 15,
-                        fontWeight: FontWeight.w900,
+                    Expanded(
+                      child: Text(
+                        headline.sourceName.toUpperCase(),
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'Telegraf',
+                          fontSize: 15,
+                          fontWeight: FontWeight.w900,
+                        ),
                       ),
                     ),
                     const Expanded(child: SizedBox()),
