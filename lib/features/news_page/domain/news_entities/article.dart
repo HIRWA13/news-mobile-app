@@ -5,6 +5,7 @@ class Article {
   final String? imageUrl;
   final String? publishedDate;
   final String? content;
+  final String? author;
 
   Article({
     this.sourceName,
@@ -13,5 +14,6 @@ class Article {
     this.imageUrl,
     this.publishedDate,
     this.content,
+    this.author,
   });
 }

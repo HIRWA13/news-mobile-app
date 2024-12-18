@@ -7,15 +7,17 @@ class ArticleModel extends Article {
   final String? content;
   final String? imageUrl;
   final String? publishedDate;
+  final String? author;
 
-  ArticleModel({
-    this.sourceName,
-    this.title,
-    this.description,
-    this.content,
-    this.imageUrl,
-    this.publishedDate,
-  }) : super(
+  ArticleModel(
+      {this.sourceName,
+      this.title,
+      this.description,
+      this.content,
+      this.imageUrl,
+      this.publishedDate,
+      this.author})
+      : super(
           sourceName: sourceName,
           title: title,
           description: description,
@@ -33,6 +35,7 @@ class ArticleModel extends Article {
       imageUrl: json['urlToImage'] ??
           'https://previews.123rf.com/images/portokalis/portokalis1607/portokalis160700034/60947667-daily-news-newspaper-headline.jpg',
       publishedDate: json['publishedAt'] ?? '',
+      author: json['author'] ?? json['source']?['name'],
     );
   }
 }
