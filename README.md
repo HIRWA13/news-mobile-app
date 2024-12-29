@@ -95,5 +95,5 @@ HeadlinesCubit: Manages the state of news headlines
 List<Headline>: Represents the state structure for headlines
 ```
 
-Author:
-[Jr HIRWA](https://github.com/HIRWA13);
+## Author:
+- [Jr HIRWA](https://github.com/HIRWA13);
