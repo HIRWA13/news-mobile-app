@@ -36,27 +36,26 @@ A modern Flutter application that provides users with the latest news headlines 
 
 ## Project Structure
 
-Copy
 
-Insert at cursor
-markdown
-lib/
-├── features/
-│ └── news/
-│ ├── domain/
-│ │ └── news_entities/
-│ │ └── headline.dart
-│ ├── presentation/
-│ │ ├── pages/
-│ │ │ └── article_details_page.dart
-│ │ ├── state/
-│ │ │ └── headlines_cubit.dart
-│ │ └── widgets/
-│ │ └── latest_news/
-│ │ ├── latest_news.dart
-│ │ └── latest_news_widget.dart
-│ └── scrapers/
-│ └── article_scraper.dart
+```md
+    lib/
+    ├── features/
+    │ └── news/
+    │ ├── domain/
+    │ │ └── news_entities/
+    │ │ └── headline.dart
+    │ ├── presentation/
+    │ │ ├── pages/
+    │ │ │ └── article_details_page.dart
+    │ │ ├── state/
+    │ │ │ └── headlines_cubit.dart
+    │ │ └── widgets/
+    │ │ └── latest_news/
+    │ │ ├── latest_news.dart
+    │ │ └── latest_news_widget.dart
+    │ └── scrapers/
+    │ └── article_scraper.dart
+```
 
 
 ## Getting Started
