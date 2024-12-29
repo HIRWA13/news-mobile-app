@@ -22,6 +22,7 @@ class HeadlinesCubit extends Cubit<List<Headline>> {
           daysAfterPublication: articles[i].publishedDate!,
           content: articles[i].content,
           author: articles[i].author,
+          originalUrl: articles[i].originalUrl
         );
         headlines.add(headline);
       }

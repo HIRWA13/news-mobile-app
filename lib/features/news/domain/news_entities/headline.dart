@@ -5,6 +5,7 @@ class Headline {
   final String imageUrl;
   String? content;
   String? author;
+  final String? originalUrl;
 
   Headline({
     required this.daysAfterPublication,
@@ -13,5 +14,6 @@ class Headline {
     required this.imageUrl,
     this.content,
     this.author,
+    this.originalUrl,
   });
 }
