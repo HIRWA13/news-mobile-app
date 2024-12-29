@@ -1,9 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:news_app/features/news_page/domain/news_use_cases/article_use_cases.dart';
-import 'package:news_app/features/news_page/presentation/state/headlines_cubit.dart';
-import 'package:news_app/features/news_page/presentation/widgets/headlines/single_headline.dart';
+import 'package:news_app/features/news/domain/news_use_cases/article_use_cases.dart';
+import 'package:news_app/features/news/presentation/state/headlines_cubit.dart';
+import 'package:news_app/features/news/presentation/widgets/headlines/single_headline.dart';
 import 'package:news_app/locator.dart';
 
 import '../../../domain/news_entities/headline.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-import 'features/news_page/presentation/pages/news_page.dart';
+import 'features/news/presentation/pages/news_page.dart';
 import 'locator.dart';
 
 Future<void> main() async {

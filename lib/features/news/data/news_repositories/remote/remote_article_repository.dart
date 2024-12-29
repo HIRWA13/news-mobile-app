@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:news_app/features/news_page/domain/news_entities/article.dart';
-import 'package:news_app/features/news_page/domain/news_repositories/article_repository.dart';
+import 'package:news_app/features/news/domain/news_entities/article.dart';
+import 'package:news_app/features/news/domain/news_repositories/article_repository.dart';
 
 import '../../news_data_source/article_data_source.dart';
 import '../../news_models/article_model.dart';

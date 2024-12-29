@@ -6,6 +6,7 @@ class Article {
   final String? publishedDate;
   final String? content;
   final String? author;
+  final String? originalUrl;
 
   Article({
     this.sourceName,
@@ -15,5 +16,6 @@ class Article {
     this.publishedDate,
     this.content,
     this.author,
+    this.originalUrl,
   });
 }

@@ -9,5 +9,4 @@ class ArticleUseCases {
   Future<List<Article>> getArticles() async {
     return await _articleRepository.getAllArticles();
   }
-
 }

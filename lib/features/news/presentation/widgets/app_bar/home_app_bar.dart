@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/features/news_page/domain/news_use_cases/article_use_cases.dart';
-import 'package:news_app/features/news_page/presentation/widgets/app_bar/logo_text.dart';
+import 'package:news_app/features/news/domain/news_use_cases/article_use_cases.dart';
+import 'package:news_app/features/news/presentation/widgets/app_bar/logo_text.dart';
 import 'package:news_app/locator.dart';
 import 'package:unicons/unicons.dart';
 
