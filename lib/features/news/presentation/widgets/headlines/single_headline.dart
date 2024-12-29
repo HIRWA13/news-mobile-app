@@ -55,8 +55,10 @@ class SingleHeadline extends StatelessWidget {
                       ),
                     ),
                     const Expanded(child: SizedBox()),
-                    Text(relativeTime,
-                        style: const TextStyle(color: Colors.white)),
+                    Text(
+                      relativeTime,
+                      style: const TextStyle(color: Colors.white),
+                    ),
                   ],
                 ),
                 Column(
@@ -77,7 +79,7 @@ class SingleHeadline extends StatelessWidget {
                         Icon(
                           UniconsLine.comment_dots,
                           color: Colors.white,
-                          size: 35,
+                          size: 25,
                         ),
                         SizedBox(
                           width: 7,
@@ -85,13 +87,13 @@ class SingleHeadline extends StatelessWidget {
                         Icon(
                           UniconsLine.bookmark,
                           color: Colors.white,
-                          size: 35,
+                          size: 25,
                         ),
                         Expanded(child: SizedBox()),
                         Icon(
                           UniconsLine.share,
                           color: Colors.white,
-                          size: 35,
+                          size: 25,
                           weight: 0.5,
                         )
                       ],

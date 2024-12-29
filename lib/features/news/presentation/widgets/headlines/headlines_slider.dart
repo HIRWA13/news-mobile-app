@@ -17,7 +17,14 @@ class HeadlinesSlider extends StatelessWidget {
     return BlocBuilder<HeadlinesCubit, List<Headline>>(
       builder: (context, state) {
         if (state.isEmpty) {
-          return const Center(child: CircularProgressIndicator());
+          return const Center(
+            child: Padding(
+              padding: EdgeInsets.all(30),
+              child: CircularProgressIndicator(
+                color: Colors.black,
+              ),
+            ),
+          );
         }
         return Expanded(
           child: Container(
