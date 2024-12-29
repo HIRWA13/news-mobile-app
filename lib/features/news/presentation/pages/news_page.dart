@@ -6,6 +6,8 @@ import 'package:news_app/features/news/presentation/widgets/bottom_navigation/ho
 import 'package:news_app/features/news/presentation/widgets/headlines/headlines_slider.dart';
 import 'package:news_app/features/news/presentation/widgets/latest_news/latest_news.dart';
 
+import '../../domain/news_entities/headline.dart';
+
 class NewsPage extends StatelessWidget {
   const NewsPage({super.key});
 
@@ -31,12 +33,19 @@ class NewsPage extends StatelessWidget {
                   const LatestNews(),
                 ],
               ),
-              const Positioned(
-                left: 0,
-                right: 0,
-                bottom: 0,
-                child: HomeBottomNav(),
-              ),
+              BlocBuilder<HeadlinesCubit, List<Headline>>(
+                builder: (context, headlines) {
+                  if (headlines.isNotEmpty) {
+                    return const Positioned(
+                      left: 0,
+                      right: 0,
+                      bottom: 0,
+                      child: HomeBottomNav(),
+                    );
+                  }
+                  return const SizedBox.shrink();
+                },
+              )
             ],
           ),
         ),
