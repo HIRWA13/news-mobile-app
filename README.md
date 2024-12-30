@@ -89,11 +89,5 @@ A modern Flutter application that provides users with the latest news headlines 
 ### State Management
 The application uses the BLoC pattern through flutter_bloc for state management:
 
-```bash
-HeadlinesCubit: Manages the state of news headlines
-
-List<Headline>: Represents the state structure for headlines
-```
-
 ## Author:
 - [Jr HIRWA](https://github.com/HIRWA13);
